@@ -72,7 +72,7 @@ echo "I’m done sleeping, thanks!"
 ```
 
 
-### User Input:
+### Read User Input:
 
 `read.sh`:
 
@@ -109,6 +109,17 @@ Use `while` with `read` for simple and robust line-by-line processing.
 - `< $file` : Redirects the file into the loop.
 
 
+### Example-1:
+
+```
+cat book.txt
+
+1.Java
+2.Python
+3.PHP
+```
+
+
 ```
 #!/bin/bash
 
@@ -125,6 +136,55 @@ done < $file
 ```
 
 
+### Example-2:
+
+```
+cat data.txt
+
+Jon|25|Engineer
+Don|20|Developer
+```
+
+
+```
+#!/bin/bash
+
+file='data.txt'
+
+while IFS='|' read -r name age profession
+
+do
+  echo "Name: $name"
+  echo "Age: $age"
+  echo "Profession: $profession"
+  echo "---"
+done < $file
+```
+
+
+### Example-3:
+
+```
+cat user.txt
+
+user1:admin123
+user2:admin321
+```
+
+
+```
+#!/bin/bash
+
+file='user.txt'
+
+while IFS=':' read -r username password
+
+do
+  echo "UserName: $username"
+  echo "password: $password"
+  echo "---"
+done < $file
+```
 
 
 
