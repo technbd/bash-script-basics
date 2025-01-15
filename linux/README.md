@@ -21,6 +21,9 @@ echo $myVar
 
 If the `echo` bash command is used with double quotation marks `" "`, then the script will print out the actual value of a variable. Otherwise, if the single quotation marks `' '` are used, it will print out only the name of a variable.
 
+- The `-e` option enables the interpretation of escape sequences, allowing you to include special characters like newlines (`\n`), tabs (`\t`), or colors in your output. To format your script's output with newlines, tabs, or colors.
+
+
 
 ```
 echo 1 2 3 4 5
@@ -47,6 +50,15 @@ name=Jon
 echo $greeting $name
 ```
 
+
+```
+#!/bin/bash
+
+echo "Hello\nWorld"
+
+echo -e "Hello\nWorld"
+echo -e "Name:\tAlice"
+```
 
 
 ### Sleep: 
