@@ -177,6 +177,48 @@ echo "End of script"
 ```
 
 
+### Passing arguments to the bash script:
+
+When executing a Bash script, it is possible to pass arguments to it in your command. For example, `$1` and `$2` variable are used to read first and second command line arguments. Two argument values read by the following script and prints the total number of arguments and the argument values as output.
+
+
+#### Example-1:
+
+```
+#!/bin/bash
+
+echo "Script name: $0"
+
+echo "1st Argument : $1"
+echo "2nd argument : $2"
+
+echo "Total arguments : $#"
+
+echo "All arguments as list : $@"
+echo "All arguments as string : $*"
+
+```
+
+
+_Run the bash script:_
+
+```
+./argument1.sh node1 node2
+
+
+### Output:
+
+Script name: ./6.argument1.sh
+1st Argument : node1
+2nd argument : node2
+Total arguments : 2
+All arguments as list : node1 node2
+All arguments as string : node1 node2
+```
+
+
+
+
 
 
 ### Loops:
