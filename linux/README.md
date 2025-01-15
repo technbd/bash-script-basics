@@ -217,7 +217,39 @@ All arguments as string : node1 node2
 ```
 
 
+### Command Substitution:
 
+
+#### Example-1:
+
+```
+#!/bin/bash
+
+## using Backticks (``):
+current_date=`date`
+echo "Today's date is: $current_date"
+
+## using $():
+date=`date`
+current_time=$(date +%H:%M:%S)
+
+echo "Current date is: $date and Time is: $current_time"
+
+```
+
+
+#### Example-2:
+
+```
+#!/bin/bash
+
+echo "Enter directory name: "
+read newdir
+
+`mkdir $newdir`
+
+echo "Directory is created: $newdir"
+```
 
 
 
