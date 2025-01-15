@@ -100,6 +100,32 @@ echo "Your name is: $name"
 
 
 
+#### Read a File:
+
+Use `while` with `read` for simple and robust line-by-line processing.
+
+- `IFS=` : Prevents trimming leading/trailing whitespace.
+- `read -r` : Prevents backslashes from being interpreted as escape characters.
+- `< $file` : Redirects the file into the loop.
+
+
+```
+#!/bin/bash
+
+file='book.txt'
+
+#while read line_read
+while read -r line_read
+
+do
+  echo $line_read
+
+done < $file
+
+```
+
+
+
 
 
 ### `set -e` option:
