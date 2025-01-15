@@ -491,6 +491,33 @@ done
 ```
 
 
+### while loop:
+
+
+_Syntax:_
+
+```
+while [ condition ]
+do
+    # Commands to be executed
+done
+```
+
+
+```
+#!/bin/bash
+
+COUNT=1
+
+while [ $COUNT -le 5 ]
+
+do
+  echo Count: $COUNT
+	((COUNT++))
+
+done
+```
+
 
 
 
