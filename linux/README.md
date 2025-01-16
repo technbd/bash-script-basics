@@ -339,6 +339,69 @@ echo "Directory is created: $newdir"
 
 
 
+### Single command output to a variable:
+
+`Note`: Don’t use any space before and after the equal sign when using the above commands.
+
+
+_Command Substitution Syntax:_
+
+```
+varName=$(command_name_here)
+varName=$(command [option…] argument1 arguments2)
+varName=$(/path/to/command)
+
+
+or,
+
+
+### Use the backtick (``):
+
+varName=`command_name_here`
+varName=`command_name_here [option…] arg1 arg2`
+varName=`/path/to/command`
+
+
+echo "$varName"
+
+echo "${varName}"
+```
+
+
+#### Example-1:
+
+- `date` command is used to show the current date and time. The `date` command output store into `$current_date` variable by using command substitution.
+
+
+```
+current_date=$(date)
+current_date=`date`
+
+echo "Today is $current_date"
+
+or,
+
+echo "Today is ${current_date}"
+```
+
+
+#### Example-2:
+
+- `pwd` command shows the path of the current working directory. The `pwd` command output store into `$current_dir` variable and the value of this variable is printed by using `echo` command.
+
+```
+current_dir=$(pwd)
+current_dir=`pwd`
+
+
+echo "The current directory is: $current_dir"
+
+or,
+
+echo "The current directory is: ${current_dir}"
+```
+
+
 ### Loops:
 
 
@@ -998,7 +1061,7 @@ get_input
 - [Bash Script Examples](https://www.hostinger.com/tutorials/bash-script-example)
 - [Bash Scripting Tutorial](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 - [Shell Scripting for Beginners](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/)
-
+- [BASH command output to the variable](https://linuxhint.com/bash_command_output_variable/)
 
 
 
